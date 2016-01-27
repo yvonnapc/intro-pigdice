@@ -7,7 +7,6 @@ $(document).ready(function() {
   for (var i = 0; i < 1; i+=random) {
       appendText.push(random); //This adds each thing we want to append to the array in order.
   }
-  console.log(appendText);
 
   var new_array = appendText.concat(); //Copy initial array
 
