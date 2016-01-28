@@ -12,12 +12,17 @@ Player.prototype.dieroll = function(){
     this.totalscore += d10;
     console.log("current score" + this.currentscore);
     console.log("total score" + this.totalscore);
+    $("#dishonor").hide();
     // var new_array = sequence.concat();
     // this.currentscore = new_array;
+ } else {
+     $("#dishonor").show();
   }
-  // this.totalscore += this.currentscore + d10;
+  if (this.totalscore >= 100) {
+    $("#winning").show();
+  }
+}// this.totalscore += this.currentscore + d10;
   //eturn this.currentscore;
-}
 
 $(document).ready(function() {
   $("form#question").submit(function(event) {
