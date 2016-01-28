@@ -4,12 +4,28 @@
     <link rel="stylesheet" href="css/styles.css" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <script src="js/jquery-1.12.0.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/oldscripts.js"></script>
     <title>The original game!</title>
   </head>
   <body>
     <h1>Provide us with one fabulous number!</h1>
     <div class="container">
+      <div class="row">
+          <div class="col-sm-6">
+          <form id="users">
+          <div class="form-group">
+            <label for="formGroupExampleInput">Player 1</label>
+            <input type="text" class="form-control" id="player1">
+          </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Player 2</label>
+              <input type="text" class="form-control" id="Player2">
+            </div>
+          </div>
+      </div>
+        </form>
       <form id="question">
         <button id="twig" type="submit" class="btn btn-danger">Click</button>
       </form>
