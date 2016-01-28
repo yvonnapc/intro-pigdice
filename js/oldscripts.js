@@ -20,16 +20,30 @@ Player.prototype.dieroll = function(){
 }
 
 $(document).ready(function() {
-$("form#question").submit(function(event) {
-  event.preventDefault();
-   var test = $("input#player1").val();
-  // var player2 = Player1();
-  // var d10 = Math.floor((Math.random()*6) + 1);
-  var newturn = new Player(test);
-  newturn.dieroll();
-  console.log("total" + newturn.totalscore);
+  $("form#question").submit(function(event) {
+    event.preventDefault();
+     var test = $("input#player1").val();
+    // var player2 = Player1();
+    // var d10 = Math.floor((Math.random()*6) + 1);
+    var newturn = new Player(test);
+    $("#print").append(test);
+    // newturn.dieroll();
+    console.log("total" + newturn.totalscore);
+
+    $("form#roll").submit(function(event) {
+      event.preventDefault();
+      var test = $("input#player1").val();
+      // var player2 = Player1();
+      // var d10 = Math.floor((Math.random()*6) + 1);
+      newturn.dieroll();
+      $("#sth").append(newturn.totalscore);
+      // $("#player1score").append(newturn.totalSCore)
+      console.log("total" + newturn.totalscore);
 
 
-});
+    });
+
+  });
+
 });
 // });
